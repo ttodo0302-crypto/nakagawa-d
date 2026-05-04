@@ -1,0 +1,395 @@
+:root{
+  --blue:#1ea7ff;
+  --dark:#0b2b3a;
+  --white:#ffffff;
+  --max-width:1100px;
+}
+
+/* ------------------------------
+   基本設定
+------------------------------ */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  color:var(--dark);
+  background:#fff;
+  font-size:16px;
+  line-height:1.7;
+}
+
+img{
+  max-width:100%;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(11,43,58,0.04);
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 16px;
+}
+
+/* ------------------------------
+   Header
+------------------------------ */
+.site-header{
+  position:fixed;
+  top:0; left:0; right:0;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+  z-index:50;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 0;
+}
+
+.logo-img{
+  height:44px;
+  width:auto;
+}
+
+.nav{
+  display:flex;
+  gap:18px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+  transition:opacity .2s;
+}
+
+.nav a:hover{
+  opacity:0.7;
+}
+
+.nav .cta{
+  background:var(--blue);
+  color:#fff;
+  padding:8px 12px;
+  border-radius:8px;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+.btn{
+  padding:12px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  display:inline-block;
+}
+
+.btn.primary{
+  background:var(--blue);
+  color:#fff;
+}
+
+.btn.outline{
+  background:#fff;
+  color:var(--dark);
+  border:2px solid var(--dark);
+}
+
+/* ------------------------------
+   Hero
+------------------------------ */
+.hero{
+  position:relative;
+  height:85vh;
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:64px;
+  overflow:hidden;
+}
+
+.hero-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(30,167,255,0.18), rgba(255,255,255,0));
+}
+
+.hero-content{
+  position:relative;
+  z-index:10;
+  text-align:center;
+  color:#fff;
+  padding:0 20px;
+}
+
+.hero-content h1{
+  font-size:clamp(28px,6vw,48px);
+  margin:0 0 10px;
+  font-weight:800;
+}
+
+.lead{
+  opacity:0.95;
+  margin-bottom:18px;
+}
+
+.hero-ctas{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* ------------------------------
+   Section
+------------------------------ */
+.section{
+  padding:64px 0;
+}
+
+.section-lead{
+  margin-bottom:24px;
+  opacity:0.85;
+}
+
+/* ------------------------------
+   Cards
+------------------------------ */
+.cards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(11,43,58,0.04);
+}
+
+/* ------------------------------
+   News
+------------------------------ */
+.news-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.news-list li{
+  padding:10px 0;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  display:flex;
+  gap:12px;
+}
+.news-list .date{
+  font-weight:700;
+  opacity:0.7;
+}
+
+/* ------------------------------
+   Works / Services
+------------------------------ */
+.works-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+.work-item h3{
+  margin-top:10px;
+  font-size:18px;
+}
+
+/* ------------------------------
+   Recruit
+------------------------------ */
+.recruit-inner{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.recruit-photo{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+/* スマホ */
+.recruit-photo img{
+  width:80%;
+  max-width:320px;
+  height:auto;
+  object-fit:contain;
+}
+
+/* ボタン */
+.recruit-btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 24px;
+  background:var(--blue);
+  color:#fff;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* ------------------------------
+   About
+------------------------------ */
+.about-inner{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.about-photo img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+
+.about-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.about-table th{
+  text-align:left;
+  width:30%;
+  padding:6px 0;
+  opacity:0.7;
+}
+.about-table td{
+  padding:6px 0;
+}
+
+/* ------------------------------
+   Access
+------------------------------ */
+.map-box{
+  margin-top:20px;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+/* ------------------------------
+   Contact
+------------------------------ */
+.contact-box{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:center;
+}
+.contact-tel{
+  font-size:22px;
+  font-weight:700;
+  text-decoration:none;
+  color:var(--dark);
+}
+.contact-btn{
+  width:100%;
+  max-width:260px;
+  text-align:center;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px;
+}
+
+/* ------------------------------
+   PC レイアウト
+------------------------------ */
+@media(min-width:900px){
+
+  .hero{
+    height:78vh;
+    margin-top:0;
+  }
+
+  .hero-content{
+    text-align:left;
+    max-width:560px;
+    left:6%;
+  }
+
+  .cards{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .works-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  /* Recruit 画像（PC） */
+  .recruit-photo img{
+    width:55%;
+    max-width:260px;
+  }
+
+  .recruit-inner{
+    flex-direction:row;
+    align-items:flex-start;
+    gap:40px;
+  }
+
+  .about-inner{
+    flex-direction:row;
+    align-items:center;
+  }
+}
+
+/* ------------------------------
+   Page Hero
+------------------------------ */
+.page-hero{
+  background:var(--blue);
+  color:#fff;
+  text-align:center;
+  padding:100px 20px 80px;
+  margin-top:64px;
+}
+.page-hero h1{
+  margin:0 0 10px;
+  font-size:clamp(28px,5vw,40px);
+  font-weight:800;
+}
+.page-hero p{
+  opacity:0.9;
+}
+.label-required {
+  color: #e60000;
+  font-weight:700;
+  margin-left:6px;
+}
+
+.label-optional {
+  color: #777;
+  margin-left:6px;
+}
